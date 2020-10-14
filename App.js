@@ -1,12 +1,25 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import Blocks from './components/Blocks'
+import {View, Text, StyleSheet ,ScrollView} from 'react-native';
+import Block from './components/Block'
+import Date from './components/Date'
+import MainBlock from './components/MainBlock'
 
 const App = () => {
   return (
     <View style = {styles.container}>
-      <Text style = {styles.text} > Hello World</Text> 
-      <Blocks />
+      <View style = {{flex :1}}>
+        <Text style = {styles.text}> 오늘 날짜가 들어갈 곳</Text>
+      </View>
+      <View style = {{flex : 2}} >
+      <ScrollView style = {styles.blocks} horizontal = {true}>
+        <Block />
+        <Block /> 
+        <Block />
+      </ScrollView>
+      </View>
+      <View style = {styles.any}>
+        <MainBlock />
+      </View>
     </View>
   )
 }
@@ -14,13 +27,20 @@ const App = () => {
 const styles = StyleSheet.create({
   container :{
     flex : 1,
-    justifyContent : 'center',
-    alignItems: 'center',
-    paddingTop : 60
+    paddingTop : 60,
+    //backgroundColor : 'red'
   },
   text : {
-    color : 'orange' ,
-    fontSize : 20,
+    paddingTop : 30,
+    fontSize : 30,
+    backgroundColor : 'yellow'
+  },
+  blocks : {
+    //backgroundColor : 'green'
+  },
+  any :{
+    flex : 4,
+    //backgroundColor : 'orange'
   }
 });
 
