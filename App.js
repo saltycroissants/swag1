@@ -1,14 +1,14 @@
 import React from 'react';
 import {View, Text, StyleSheet ,ScrollView} from 'react-native';
 import Block from './components/Block'
-import Date from './components/Date'
+import ShowDate from './components/ShowDate'
 import MainBlock from './components/MainBlock'
 
 const App = () => {
   return (
     <View style = {styles.container}>
-      <View style = {{flex :1}}>
-        <Text style = {styles.text}> 오늘 날짜가 들어갈 곳</Text>
+      <View style = {{flex :1, backgroundColor : 'yellow'}}>
+        <ShowDate />
       </View>
       <View style = {{flex : 2}} >
       <ScrollView style = {styles.blocks} horizontal = {true}>
