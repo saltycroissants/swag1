@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     mainBlock :{
         aspectRatio: 0.8,
         backgroundColor : 'purple',
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20
+        borderTopLeftRadius: 34,
+        borderTopRightRadius: 34
     }
 });
 

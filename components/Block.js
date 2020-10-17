@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         //border: 1 solid #5235BB,
         
         //boxShadow: 4px 4px 5px 'rgba(0, 0, 0, 0.2)',
-        borderRadius: 20
+        //borderRadius: 20
     },
     text : {
         fontSize :20

@@ -7,8 +7,19 @@ import MainBlock from './components/MainBlock'
 const App = () => {
   return (
     <View style = {styles.container}>
-      <View style = {{flex :1, backgroundColor : 'yellow'}}>
-        <ShowDate />
+
+      <View style = {{flex :0.5 }}>
+        <View style = {{flex : 1, flexDirection: "row" }}>
+          <ShowDate style = {{flex :1, flexDirection: "row"}}/>
+        <View/>
+        <View style = {{flex :1, flexDirection: "row", justifyContent : "flex-end"}}>
+          <Text style = {{ fontSize : 30, textAlign : 'left'}}> 우체통 </Text>
+        </View>
+      </View >
+
+    </View>
+      <View style= {{flex :0.5}}>
+        <Text style = {styles.text}> TODAY </Text>
       </View>
       <View style = {{flex : 2}} >
       <ScrollView style = {styles.blocks} horizontal = {true}>
@@ -17,7 +28,7 @@ const App = () => {
         <Block />
       </ScrollView>
       </View>
-      <View style = {styles.any}>
+      <View style = {styles.mainBlock}>
         <MainBlock />
       </View>
     </View>
@@ -31,15 +42,14 @@ const styles = StyleSheet.create({
     //backgroundColor : 'red'
   },
   text : {
-    paddingTop : 30,
     fontSize : 30,
-    backgroundColor : 'yellow'
+   
   },
   blocks : {
     //backgroundColor : 'green'
   },
-  any :{
-    flex : 4,
+  mainBlock :{
+    flex :4.5,
     //backgroundColor : 'orange'
   }
 });

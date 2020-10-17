@@ -2,20 +2,28 @@ import React, {useState, useEffect} from 'react';
 import {View,Text, StyleSheet} from 'react-native';
 
 const ShowDate = () => {
-    const today = new Date().getDate();
-    const [date, setDate] = useState(today);
+    const today = new Date();
+    const currentDate = today.getDate();
+    const currentDay = today.getDay();
+    const currentMonth = today.getMonth();
+    const days = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"];
+
+    const dateString = currentMonth + "월 " + currentDate + "일 " + days[currentDay]
+    
+    const [date, setDate] = useState(dateString);
     
     //console.log(today);
     
     return (
         <View>
-            <Text style = {styles.text}> 오늘은 {date} 일</Text>
+            <Text style = {styles.text}>{date}</Text>
         </View>    
     )
 }
 const styles = StyleSheet.create({
     text : {
-        fontSize : 30
+        fontSize : 30,
+        
     }
 })
 
