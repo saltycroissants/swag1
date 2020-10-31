@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         marginRight : 10,
         marginLeft : 10,
         //flexDirection : 'row',
-        backgroundColor : 'purple',
+        backgroundColor : '#FFF',
         //borderColor : 'orange',
         //border: 1 solid #5235BB,
         

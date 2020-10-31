@@ -13,7 +13,7 @@ const App = () => {
           <ShowDate style = {{flex :1, flexDirection: "row"}}/>
         <View/>
         <View style = {{flex :1, flexDirection: "row", justifyContent : "flex-end"}}>
-          <Text style = {{ fontSize : 30, textAlign : 'left'}}> 우체통 </Text>
+          <Text style = {{ fontSize : 20, textAlign : 'left'}}> 우체통 </Text>
         </View>
       </View >
 
@@ -39,10 +39,14 @@ const styles = StyleSheet.create({
   container :{
     flex : 1,
     paddingTop : 60,
-    //backgroundColor : 'red'
+    backgroundColor : '#5235BB'
+    
   },
   text : {
     fontSize : 30,
+    fontFamily : 'NanumSquareEB',
+    color : '#fff'
+    
    
   },
   blocks : {
